@@ -23,7 +23,7 @@ jobs:
     - name: Install Dependencies 
       run: npm ci
     - name: Install Playwright Dependencies
-      run: npx playwright install  
+      run: npx playwright install --with-deps 
     - name: Run Web App
       run: npm start & npx wait-on http://localhost:3000
     - name: Run Integration Tests
