@@ -22,6 +22,8 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies 
       run: npm ci
+    - name: Install update
+      run: npm update
     - name: Run Web App
       run: npm start & npx wait-on http://localhost:3000
     - name: Run Server
