@@ -24,6 +24,10 @@ jobs:
       run: npm ci
     - name: Run Web App
       run: npm start & npx wait-on http://localhost:3000
+    - name: Run Server
+      run: node server/server.js
+    - name: Run Playwright tests
+      run: npx playwright test tests/library.test.js 
       
   deploy: 
     runs-on: ubuntu-latest
